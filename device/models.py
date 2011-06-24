@@ -11,10 +11,7 @@ class Host(models.Model):
     name      = models.CharField(max_length=100)
     ipaddress = models.IPAddressField()
     
-    level     = models.ForeignKey(Level)
+    serverlevel     = models.ForeignKey(Level)
     
     def __unicode__(self):
         return self.name
-    
-    
-    # Change

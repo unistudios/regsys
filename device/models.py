@@ -14,6 +14,8 @@ class Function(models.Model):
     def __unicode__(self):
         return self.description
 
+
+
 """ servers """
 class Host(models.Model):
     name      = models.CharField(max_length=100)

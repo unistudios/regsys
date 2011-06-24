@@ -1,4 +1,5 @@
 from django.db import models
+from device.models import Host
 
 """ AppOwner """
 class Owner(models.Model):
@@ -21,6 +22,7 @@ class Application(models.Model):
 
     applevel = models.ForeignKey(Level)
     appowner = models.ForeignKey(Owner)
+    host     = models.ManyToManyField(Host, blank=True)
 
     def __unicode__(self):
         return self.name

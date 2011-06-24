@@ -1,0 +1,72 @@
+[
+  {
+    "pk": 1, 
+    "model": "device.level", 
+    "fields": {
+      "description": "Production"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "device.level", 
+    "fields": {
+      "description": "Development"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "device.level", 
+    "fields": {
+      "description": "Staging"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "device.level", 
+    "fields": {
+      "description": "QA"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "device.level", 
+    "fields": {
+      "description": "Disaster Recovery"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "device.function", 
+    "fields": {
+      "description": "Application Server"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "device.function", 
+    "fields": {
+      "description": "Database"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "device.function", 
+    "fields": {
+      "description": "Domain Controller"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "device.function", 
+    "fields": {
+      "description": "Cluster"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "device.function", 
+    "fields": {
+      "description": "File Server"
+    }
+  }
+]

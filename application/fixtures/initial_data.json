@@ -1,0 +1,23 @@
+[
+  {
+    "pk": 1, 
+    "model": "application.level", 
+    "fields": {
+      "name": "Level 1"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "application.level", 
+    "fields": {
+      "name": "Level 2"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "application.level", 
+    "fields": {
+      "name": "Level 3"
+    }
+  }
+]

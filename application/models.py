@@ -10,18 +10,18 @@ class Owner(models.Model):
         return self.name
 
 """ Application Level - Prod, QA, Dev, etc """
-class Level(models.Model):
-    name = models.CharField(max_length=20)
+class Importance(models.Model):
+    description = models.CharField(max_length=20)
 
     def __unicode__(self):
-        return self.name
+        return self.description
 
 """ Application """
 class Application(models.Model):
     name = models.CharField(max_length=100)
 
-    applevel = models.ForeignKey(Level)
-    appowner = models.ForeignKey(Owner)
+    applevel = models.ForeignKey(Importance, blank=True)
+    appowner = models.ManyToManyField(Owner)
     host     = models.ManyToManyField(Host, blank=True)
 
     def __unicode__(self):

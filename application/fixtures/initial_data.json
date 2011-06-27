@@ -1,23 +1,23 @@
 [
   {
     "pk": 1, 
-    "model": "application.level", 
+    "model": "application.importance", 
     "fields": {
-      "name": "Level 1"
+      "description": "Level 1"
     }
   }, 
   {
     "pk": 2, 
-    "model": "application.level", 
+    "model": "application.importance", 
     "fields": {
-      "name": "Level 2"
+      "description": "Level 2"
     }
   }, 
   {
     "pk": 3, 
-    "model": "application.level", 
+    "model": "application.importance", 
     "fields": {
-      "name": "Level 3"
+      "description": "Level 3"
     }
   }
 ]

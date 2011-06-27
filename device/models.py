@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 """ Server Level - prod, dev, qa..."""
-class Level(models.Model):
+class Servicelevel(models.Model):
     description = models.CharField(max_length=20)
         
     def __unicode__(self):
@@ -14,15 +14,13 @@ class Function(models.Model):
     def __unicode__(self):
         return self.description
 
-
-
 """ servers """
 class Host(models.Model):
     name      = models.CharField(max_length=100)
     ipaddress = models.IPAddressField()
     
     # Relationships
-    serverlevel     = models.ForeignKey(Level)
+    serverlevel     = models.ForeignKey(Servicelevel, default=6)
     serverfunction  = models.ManyToManyField(Function, blank=True)
     
     def __unicode__(self):

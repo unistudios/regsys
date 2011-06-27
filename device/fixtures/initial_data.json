@@ -1,39 +1,46 @@
 [
   {
     "pk": 1, 
-    "model": "device.level", 
+    "model": "device.servicelevel", 
     "fields": {
       "description": "Production"
     }
   }, 
   {
     "pk": 2, 
-    "model": "device.level", 
+    "model": "device.servicelevel", 
     "fields": {
       "description": "Development"
     }
   }, 
   {
     "pk": 3, 
-    "model": "device.level", 
+    "model": "device.servicelevel", 
     "fields": {
       "description": "Staging"
     }
   }, 
   {
     "pk": 4, 
-    "model": "device.level", 
+    "model": "device.servicelevel", 
     "fields": {
       "description": "QA"
     }
   }, 
   {
     "pk": 5, 
-    "model": "device.level", 
+    "model": "device.servicelevel", 
     "fields": {
       "description": "Disaster Recovery"
     }
   }, 
+  {
+    "pk": 6, 
+    "model": "device.servicelevel", 
+    "fields": {
+      "description": "Unknown"
+    }
+  },
   {
     "pk": 1, 
     "model": "device.function", 

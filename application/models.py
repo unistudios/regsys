@@ -21,7 +21,7 @@ class Application(models.Model):
     name = models.CharField(max_length=100)
 
     applevel = models.ForeignKey(Importance, blank=True)
-    appowner = models.ManyToManyField(Owner)
+    appowner = models.ManyToManyField(Owner, blank=True)
     host     = models.ManyToManyField(Host, blank=True)
 
     def __unicode__(self):

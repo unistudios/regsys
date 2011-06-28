@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'device', 
     'application', 
     
+    'south',    
     'django.contrib.admin',
     
 )

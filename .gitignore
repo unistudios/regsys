@@ -1,3 +1,4 @@
 *.pyc
 media\extjs
 database.sqlite3
+migrations

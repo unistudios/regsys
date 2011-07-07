@@ -19,6 +19,10 @@ urlpatterns = patterns('',
 #    url(r'^application/', include('application.urls')),
         
     url(r'^admin/', include(admin.site.urls)),
+   
+    url(r'^rest/$', direct_to_template, {'template':'restful.html'} ),
+    url(r'^rest/data/users/(?P<user_id>\d+)$', 'john.user'), 
+    url(r'^rest/data/users/$', 'john.users'),
 )
 
 if settings.DEBUG:

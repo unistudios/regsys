@@ -20,7 +20,7 @@ class Host(models.Model):
     ipaddress = models.IPAddressField()
     
     # Relationships
-    blah    = models.ForeignKey(Servicelevel, default=6)
+    serverlevel           = models.ForeignKey(Servicelevel, default=6)
     serverfunction  = models.ManyToManyField(Function, blank=True)
     
     def __unicode__(self):

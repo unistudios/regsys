@@ -68,7 +68,7 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -101,7 +101,14 @@ MIDDLEWARE_CLASSES = (
 #    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+#    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+
 )
+
+INTERNAL_IPS = ('127.0.0.1',)
+
+
 
 ROOT_URLCONF = 'regsys.urls'
 
@@ -125,6 +132,8 @@ INSTALLED_APPS = (
     
     'south',    
     'django.contrib.admin',
+#    'debug_toolbar',
+    'django_cpserver',
     
 )
 

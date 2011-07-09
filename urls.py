@@ -16,8 +16,9 @@ urlpatterns = patterns('',
     # url(r'^regsys/', include('regsys.foo.urls')),
 
     url(r'^device/', include('device.urls')),
-#    url(r'^application/', include('application.urls')),
-        
+
+    url(r'^app/', include('application.urls')),
+    
     url(r'^admin/', include(admin.site.urls)),
    
     url(r'^rest/$', direct_to_template, {'template':'restful.html'} ),

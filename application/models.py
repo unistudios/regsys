@@ -20,7 +20,7 @@ class Importance(models.Model):
 class Application(models.Model):
     name = models.CharField(max_length=100)
 
-    applevel = models.ForeignKey(Importance, blank=True)
+    applevel = models.ForeignKey(Importance, blank=True, null=True)
     appowner = models.ManyToManyField(Owner, blank=True)
     host     = models.ManyToManyField(Host, blank=True)
 

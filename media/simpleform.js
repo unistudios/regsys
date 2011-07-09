@@ -1,9 +1,8 @@
 Ext.onReady(function(){
 
 	Ext.create('Ext.grid.Panel', {
-	    renderTo: Ext.getBody(),
+	    renderTo: mygrid,
 	    store: userStore,
-	    width: 800,
 	    height: 200,
 	    title: 'Application Users',
 	    columns: [

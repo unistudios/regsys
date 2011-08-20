@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Testing ONLY!
-    url(r'^$', direct_to_template, {'template':'index.html'} ),
+    #url(r'^$', direct_to_template, {'template':'index.html'} ),
 
     # Examples:
     # url(r'^$', 'regsys.views.home', name='home'),
@@ -21,9 +21,9 @@ urlpatterns = patterns('',
     
     url(r'^admin/', include(admin.site.urls)),
    
-    url(r'^rest/$', direct_to_template, {'template':'restful.html'} ),
-    url(r'^rest/data/users/(?P<user_id>\d+)$', 'john.user'), 
-    url(r'^rest/data/users/$', 'john.users'),
+    # url(r'^rest/$', direct_to_template, {'template':'restful.html'} ),
+    # url(r'^rest/data/users/(?P<user_id>\d+)$', 'john.user'), 
+    # url(r'^rest/data/users/$', 'john.users'),
 )
 
 if settings.DEBUG:

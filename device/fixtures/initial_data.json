@@ -1,79 +1,149 @@
 [
-  {
-    "pk": 1, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "Production"
+    {
+        "pk": 1, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "Production"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "Development"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "Staging"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "QA"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "Disaster Recovery"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "device.servicelevel", 
+        "fields": {
+            "description": "Unknown"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "device.function", 
+        "fields": {
+            "description": "Application Server"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "device.function", 
+        "fields": {
+            "description": "Database"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "device.function", 
+        "fields": {
+            "description": "Domain Controller"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "device.function", 
+        "fields": {
+            "description": "Cluster"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "device.function", 
+        "fields": {
+            "description": "File Server"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Unknown"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Windows 2003"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Windows 2000"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Windows 2008"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Windows 2008 R2"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Windows NT 4.0"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Linux 3"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Linux 4"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Linux 5"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "device.operatingsystem", 
+        "fields": {
+            "description": "Solaris"
+        }
     }
-  }, 
-  {
-    "pk": 2, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "Development"
-    }
-  }, 
-  {
-    "pk": 3, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "Staging"
-    }
-  }, 
-  {
-    "pk": 4, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "QA"
-    }
-  }, 
-  {
-    "pk": 5, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "Disaster Recovery"
-    }
-  }, 
-  {
-    "pk": 6, 
-    "model": "device.servicelevel", 
-    "fields": {
-      "description": "Unknown"
-    }
-  },
-  {
-    "pk": 1, 
-    "model": "device.function", 
-    "fields": {
-      "description": "Application Server"
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "device.function", 
-    "fields": {
-      "description": "Database"
-    }
-  }, 
-  {
-    "pk": 3, 
-    "model": "device.function", 
-    "fields": {
-      "description": "Domain Controller"
-    }
-  }, 
-  {
-    "pk": 4, 
-    "model": "device.function", 
-    "fields": {
-      "description": "Cluster"
-    }
-  }, 
-  {
-    "pk": 5, 
-    "model": "device.function", 
-    "fields": {
-      "description": "File Server"
-    }
-  }
 ]

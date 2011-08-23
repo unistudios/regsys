@@ -6,3 +6,4 @@ migrations/
 django_cpserver/
 hold.html
 *.exe
+settings_local.py

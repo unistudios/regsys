@@ -30,7 +30,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Los Angeles'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -45,6 +45,12 @@ USE_I18N = True
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
 USE_L10N = True
+
+#
+# I think we'll import the local_settings.py here, to redefine anything above us.
+from settings_local import *
+#
+#
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -103,12 +109,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 #    'debug_toolbar.middleware.DebugToolbarMiddleware',
 
-
 )
 
 INTERNAL_IPS = ('127.0.0.1',)
-
-
 
 ROOT_URLCONF = 'regsys.urls'
 
@@ -129,12 +132,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'device', 
     'application', 
-    
     'south',    
     'django.contrib.admin',
-#    'debug_toolbar',
-    'django_cpserver',
-    
 )
 
 # A sample logging configuration. The only tangible logging

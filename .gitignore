@@ -2,7 +2,6 @@
 media/extjs/
 media/admin/
 database.sqlite3
-migrations/
 django_cpserver/
 hold.html
 *.exe

@@ -22,12 +22,20 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal('device', ['Function'])
 
+        # Adding model 'OperatingSystem'
+        db.create_table('device_operatingsystem', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('description', self.gf('django.db.models.fields.CharField')(max_length=20)),
+        ))
+        db.send_create_signal('device', ['OperatingSystem'])
+
         # Adding model 'Host'
         db.create_table('device_host', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('ipaddress', self.gf('django.db.models.fields.IPAddressField')(max_length=15)),
+            ('ipaddress', self.gf('django.db.models.fields.IPAddressField')(max_length=15, null=True, blank=True)),
             ('serverlevel', self.gf('django.db.models.fields.related.ForeignKey')(default=6, to=orm['device.Servicelevel'])),
+            ('OS', self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['device.OperatingSystem'])),
         ))
         db.send_create_signal('device', ['Host'])
 
@@ -48,6 +56,9 @@ class Migration(SchemaMigration):
         # Deleting model 'Function'
         db.delete_table('device_function')
 
+        # Deleting model 'OperatingSystem'
+        db.delete_table('device_operatingsystem')
+
         # Deleting model 'Host'
         db.delete_table('device_host')
 
@@ -63,11 +74,17 @@ class Migration(SchemaMigration):
         },
         'device.host': {
             'Meta': {'object_name': 'Host'},
+            'OS': ('django.db.models.fields.related.ForeignKey', [], {'default': '1', 'to': "orm['device.OperatingSystem']"}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'ipaddress': ('django.db.models.fields.IPAddressField', [], {'max_length': '15'}),
+            'ipaddress': ('django.db.models.fields.IPAddressField', [], {'max_length': '15', 'null': 'True', 'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'serverfunction': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['device.Function']", 'symmetrical': 'False', 'blank': 'True'}),
             'serverlevel': ('django.db.models.fields.related.ForeignKey', [], {'default': '6', 'to': "orm['device.Servicelevel']"})
+        },
+        'device.operatingsystem': {
+            'Meta': {'object_name': 'OperatingSystem'},
+            'description': ('django.db.models.fields.CharField', [], {'max_length': '20'}),
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'})
         },
         'device.servicelevel': {
             'Meta': {'object_name': 'Servicelevel'},

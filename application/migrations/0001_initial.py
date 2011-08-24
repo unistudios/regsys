@@ -95,7 +95,7 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'Host'},
             'OS': ('django.db.models.fields.related.ForeignKey', [], {'default': '1', 'to': "orm['device.OperatingSystem']"}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'ipaddress': ('django.db.models.fields.IPAddressField', [], {'max_length': '15', 'blank': 'True'}),
+            'ipaddress': ('django.db.models.fields.IPAddressField', [], {'max_length': '15', 'null': 'True', 'blank': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'serverfunction': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['device.Function']", 'symmetrical': 'False', 'blank': 'True'}),
             'serverlevel': ('django.db.models.fields.related.ForeignKey', [], {'default': '6', 'to': "orm['device.Servicelevel']"})

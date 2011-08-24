@@ -30,9 +30,9 @@ class OperatingSystem(models.Model):
 """ servers """
 class Host(models.Model):
     name      = models.CharField(max_length=100)
-    ipaddress = models.IPAddressField(blank=True)
+    ipaddress = models.IPAddressField(blank=True, null=True)
     
-    # Relationships
+    # Relationshipsa
     serverlevel     = models.ForeignKey(Servicelevel, default=6)
     serverfunction  = models.ManyToManyField(Function, blank=True)
     OS              = models.ForeignKey(OperatingSystem, default=1)
